@@ -1,14 +1,9 @@
-from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseForbidden
 from linebot import WebhookHandler, LineBotApi
 from linebot.exceptions import InvalidSignatureError
-from linebot.models import PostbackEvent, MessageEvent, TextMessage, TextSendMessage, FollowEvent, FlexSendMessage
+from linebot.models import MessageEvent, TextMessage, TextSendMessage, FollowEvent, FlexSendMessage
 from django.views.decorators.csrf import csrf_exempt
-from .scraping import ScrapingView
 from . import models 
-from django.db.models import Q
-import pandas as pd
-import json
 import MeCab
 
 CHANNEL_SECRET = '569a985e6d60b9ccd2f1875373f5ef74'
