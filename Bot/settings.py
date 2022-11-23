@@ -145,7 +145,7 @@ except ImportError:
     pass
 
 if not DEBUG:
-    SECRET_KEY = os.environ['SECRET_KEY']
+    SECRET_KEY = "django-insecure-n9migz)217a6yucwbzds92t77wmr)co@^%*q+c!^v84l_twz6b"
     import django_heroku
     django_heroku.settings(locals())
 
